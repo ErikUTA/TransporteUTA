@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><i class="fas fa-car"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['/home']" routerLinkActive="active disable">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['/admin']" >Administrador</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['/cliente']">Cliente</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['/chofer']">Chofer</a>
+        </li>   
+      </ul>     
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+</nav>
+
+<div class="conteiner m-4" style="display: flex; justify-content: center; text-align: center;">
+  <div class="jumbotron bg-dark pl-4 pr-4 pb-4 pt-1">        
+      <h2 class="text-center mt-3 mb-3 text-white">Login para cliente.</h2>
+      <div class="formw">             
+          <input type="text" required [(ngModel)]="login.Correo">
+          <label class="lbl-nom">
+              <span class="text-nomb">Ingrese su correo</span>
+          </label>
+      </div>                
+      <div class="formw">                        
+          <input type="password" required [(ngModel)]="login.Contrasena">
+          <label class="lbl-nom">
+              <span class="text-nomb">Ingrese su contraseña</span>
+          </label>
+      </div>       
+      <div *ngIf="mostrar">
+          <div *ngIf="!resultado" class="alert alert-danger alert-dismissible fade show" role="alert" style="width: 100%;">
+              <p>{{ mensaje }}</p>
+              <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+      </div>
+      <button class="btn btn-dark mt-3 col-12" (click)="loginCliente()"> INICIAR SESIÓN </button>        
+  </div>
+</div>

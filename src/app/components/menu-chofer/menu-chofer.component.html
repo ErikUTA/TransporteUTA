@@ -1,0 +1,123 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"><i class="fas fa-car"></i></a><h3 class="text-white">Menu de chofer</h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>  
+  </nav>
+  
+  <div class="p-2">
+    <div class="conteiner">    
+      <div class="jumbotron m-5 bg-dark">            
+                <button class="btn btn-outline-light m-1" [routerLink]="['/home']">Cerrar sesión</button>          
+                <h3 class="text-center text-white">Registre los datos de su viaje.</h3>                
+                <div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14912.326640323228!2d-105.44554280487061!3d20.868758570704276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8421167013c8ae33%3A0xe64c404b1f6ba11a!2sPlaya%20Sayulita!5e0!3m2!1ses!2smx!4v1613511779011!5m2!1ses!2smx" width="600" height="450" frameborder="0" style="border:0;" height="400px" width="100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>            
+                <div class="d-flex col-12">
+                    <div class="formw col-6 ml-2">            
+                      <input type="text" required>
+                      <label class="lbl-nom">
+                        <span class="text-nomb">Origen</span>
+                      </label>
+                    </div>                
+                    <div class="formw col-6 ml-5">            
+                      <input type="time" required> 
+                      <label class="lbl-nom">                        
+                      </label>
+                    </div>                                  
+                </div>                                
+                <div class="d-flex col-12">
+                    <div class="formw col-6 ml-2">            
+                      <input type="text" required>
+                      <label class="lbl-nom">
+                        <span class="text-nomb">Destino</span>
+                      </label>
+                    </div>                                    
+                    <div class="formw col-6 ml-5">            
+                      <input type="text" required>
+                      <label class="lbl-nom">
+                        <span class="text-nomb">Ubicación del pasajero</span>
+                      </label>
+                    </div>                                    
+                </div>                                
+                <div class="col-12 btn-group mt-4 mb-4">
+                    <button class="btn btn-success col-6">Aceptar</button>
+                    <button class="btn btn-danger col-6">Rechazar</button>
+                </div>
+                <hr style="border-width: 4px; border-color: white;">
+                <div class="p-3" style="border-radius: 10px; background-image: url(../../../assets/fondoDiv.jpg); background-size: cover;background-color: gray; background-blend-mode: screen; ">
+                  <h3 class="text-center">Seleccione la opción de su agrado</h3>
+                  <div class="d-flex" style="justify-content: center;">
+                      <div class="card m-3" style="width: 18rem;">
+                          <img src="../../../assets/choque.jpeg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Registrar coche</h5>
+                            <p class="card-text">En este apartado podrás relizar un registrode de choque.</p>
+                            <button class="btn btn-primary col-12" style="top: 25%;" [routerLink]="['/registroChofer']">Continuar...</button>
+                          </div>
+                      </div>
+                      <div class="card m-3" style="width: 18rem;">
+                          <img src="../../../assets/reportes.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Reportes generales</h5>
+                            <p class="card-text">En este apartado podrás realizar un reporte completo tanto de fecha como de ubicación y de viajes por chofer.</p>
+                            <button class="btn btn-primary col-12" [routerLink]="['/reportesChofer']">Continuar...</button>
+                          </div>
+                      </div>
+                      <div class="card m-3" style="width: 18rem;">
+                          <img src="../../../assets/viaje.jpeg" class="card-img-top" alt="..." height="150px">
+                          <div class="card-body">
+                            <h5 class="card-title">Registros de viajes</h5>
+                            <p class="card-text">En este apartado podrás visualizar el registro de tus viajes.</p>
+                            <button class="btn btn-primary col-12" style="top: 13%;" [routerLink]="['/viajesChofer']">Continuar...</button>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <hr style="border-width: 4px; border-color: white;">                
+                <h3 class="text-center text-white mt-5">REGISTRO DE SITUACION DE ROBO</h3>
+                <div class="mt-5">
+                    <div class="text-white text-center col-12 d-flex">
+                        <div class="form-check col-6">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Grave con daños a la salud
+                            </label>
+                          </div>
+                          <div class="form-check col-6">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Robo de pertenencias
+                            </label>
+                        </div>
+                    </div>
+                    <div class="d-flex col-6 mb-5">
+                        <div class="formw ml-2">            
+                            <input type="text" required>
+                            <label class="lbl-nom">
+                                <span class="text-nomb">Motivo</span>
+                            </label>
+                        </div>                                    
+                    </div>
+                </div>
+                <button class="btn btn-danger col-12">Alertar</button>
+                <hr style="border-width: 4px; border-color: white;">
+                <h3 class="text-center text-white mt-5">PAGOS</h3>
+                <div class="text-center">
+                  <img src="../../../assets/pagos.jpg" width="400px" height="200px" style="border-radius: 10px;">
+                </div>
+                <div class="d-flex col-12">
+                  <div class="d-flex col-6 ml-2">                                                    
+                    <label for="" class="text-white pt-4"><input class="pt-5 mr-2" type="checkbox" required width="10px" height="10px">Efectivo</label>
+                  </div>                
+                  <div class="formw col-6 ml-5">            
+                    <input type="number" required>
+                    <label class="lbl-nom">
+                      <span class="text-nomb">Pago con tarjeta (Ingresar numero de tarjeta)</span>
+                    </label>                    
+                  </div>              
+                </div>
+                <button class="btn btn-success col-12 mt-3">Proceder con el pago</button>
+        </div>
+    </div>
+  </div>

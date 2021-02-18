@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"><i class="fas fa-car"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">                
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['/menuCliente']">Regresar</a>
+        </li>   
+      </ul>     
+    </div>
+</nav>
+<div class="jumbotron m-5 bg-dark">
+  <div class="conteiner d-flex">
+      <div class="col-6">
+        <h3 class="text-white">Reporte general</h3>        
+        <div class="formw">            
+          <input type="text" required>
+          <label class="lbl-nom">
+            <span class="text-nomb">Nombre del cliente</span>
+          </label>
+        </div>
+        <div class="formw">            
+          <input type="date" required>
+          <label class="lbl-nom">
+            
+          </label>
+        </div>
+        <div class="formw">
+          <input type="number" required>
+          <label class="lbl-nom">
+            <span class="text-nomb">Ubicación</span>
+          </label>
+        </div>
+        <div class="formw">
+          <input type="text" required>
+          <label class="lbl-nom">
+            <span class="text-nomb">Comentarios que quiera agregar</span>
+          </label>
+        </div>
+        <button class="col-12 btn btn-primary mt-2">Enviar</button>
+      </div>
+      <div class="col-6">        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14912.326640323228!2d-105.44554280487061!3d20.868758570704276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8421167013c8ae33%3A0xe64c404b1f6ba11a!2sPlaya%20Sayulita!5e0!3m2!1ses!2smx!4v1613511779011!5m2!1ses!2smx" width="600" height="450" frameborder="0" style="border:0;" height="300px" width="450px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+  </div>
+</div>
+

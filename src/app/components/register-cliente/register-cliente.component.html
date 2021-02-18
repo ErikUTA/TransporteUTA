@@ -1,0 +1,72 @@
+<div style="background-color: cadetblue;">
+
+    <button class="btn btn-warning m-2" [routerLink]="['/cliente']">Regresar</button>
+    <div class="d-flex col-12" style="justify-content: center; text-align: center;">
+            <div class="conteiner mt-5" style="display: flex; justify-content: center; text-align: center;">
+                <div class="jumbotron" style="width: 500px;">
+                    <h2 class="text-center mb-4">Registro, cambios y bajas para cliente.</h2>
+                    <form action="" #form="ngForm" ngForm="form" (ngSubmit)="registrarCliente(form)" method="POST">                        
+                        <div class="d-flex mb-2">
+                            <label class="col-4">Correo:</label>
+                            <input class="input-group-text col-8 bg-white" type="email" placeholder="Ingresa tu correo." name="Correo" #Correo="ngModel"  [(ngModel)]="registro.Correo">
+                        </div>
+                        <div class="d-flex mb-2">
+                            <label class="col-4">Contraseña:</label>
+                            <input class="input-group-text col-8 bg-white" type="password" placeholder="Ingresa tu contraseña." name="Password" #Password="ngModel"  [(ngModel)]="registro.Password">
+                        </div>                    
+                        <div class="d-flex mb-2">
+                            <label class="col-4">Confirmar contraseña:</label>
+                            <input class="input-group-text col-8 bg-white" type="password" placeholder="Vuelve a escribir tu contraseña.">
+                        </div>                    
+                        <div class="d-flex mb-2">
+                            <label class="col-4">Tipo:</label>
+                            <input class="input-group-text col-8 bg-white" type="text" placeholder="Ingresa el tipo de usuario." name="Tipo" #Tipo="ngModel"  [(ngModel)]="registro.Tipo">
+                        </div>                                     
+                        <div class="d-flex btn-group mt-4" style="margin-bottom: -6%;">
+                            <button type="submit" onclick="document.location.reload()" class="btn btn-dark col-12">Guardar</button>                                        
+                        </div>   
+                    </form>
+                    <div class="d-flex btn-group mt-4" style="margin-bottom: -6%;">                    
+                        <button class="btn btn-outline-dark col-12" data-toggle="modal" data-target="#cliente">Ver clientes agregados</button>                
+                    </div>  
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="cliente">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Clientes</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-dark">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Nombre</th>                      
+                      <th>Fotografia</th>
+                      <th>Seleccionar</th>                      
+                  </tr>
+              </thead>
+              <tbody *ngFor="let a of clientes">
+                    <tr>
+                        <td>{{ a.ID }}</td>
+                        <td>{{ a.Correo }}</td>                                                
+                        <td>{{ a.Tipo }}</td>
+                        <td><button class="btn btn-primary" (click)="guardarIDCl(a.ID)">ID</button></td>                        
+                    </tr>
+              </tbody>              
+          </table>
+        </div>
+        <div class="modal-footer btn-group">
+            <button type="button" class="btn btn-warning" (click)="modCliente(form)">Modificar</button>          
+            <button type="button" class="btn btn-danger" (click)="deleteCliente()">Eliminar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+</div>

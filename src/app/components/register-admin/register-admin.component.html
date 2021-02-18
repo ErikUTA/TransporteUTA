@@ -1,0 +1,309 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"><i class="fas fa-car"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">                
+            <li class="nav-item active">
+            <a class="nav-link btn btn-outline-primary" href="#" [routerLink]="['/menuAdmin']">Regresar</a>
+        </li>                               
+    </ul>     
+</div>
+</nav>
+<div> 
+    <div class="d-flex col-12">    
+        <div class="conteiner mt-3 col-12" style="display: flex; justify-content: center; text-align: center;">
+            <div class="jumbotron" style="width: 300px; border-top-right-radius: 0%; border-bottom-right-radius: 0%; background-color: brown;">
+                <form #form="ngForm" ngForm="form" (ngSubmit)="registrarAdmin(form)" method="POST">
+                    <h2 class="text-center text-white mb-4">Usuarios.</h2>                
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text"  name="Correo" #Correo="ngModel" [(ngModel)]="informA.Correo"> 
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Ingrese su correo</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="password" name="Password" #Password="ngModel" [(ngModel)]="informA.Password">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Ingrese su contraseña</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="password">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Confirme su contraseña</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Nombre</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="number">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Celular</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 text-white">      
+                        <label class="mr-1">Imagen</label>                  
+                        <input class="ml-4" required type="file">                        
+                    </div>                                        
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text" name="Tipo" #Tipo="ngModel"  [(ngModel)]="informA.Tipo">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Curp</span>
+                        </label>
+                    </div>                                        
+                    <button type="submit" onclick="document.location.reload()" class="btn btn-dark col-12 mt-4">Guardar</button>                                            
+                </form>
+                <div class="d-flex btn-group" style="margin-bottom: -6%;">                    
+                    <button class="btn btn-danger col-6" data-toggle="modal" data-target="#admin">Eliminar</button>                                
+                    <button type="button" class="btn btn-warning col-6" data-toggle="modal" data-target="#cambios">Modificar</button>          
+                </div>                                                                                                       
+            </div>
+            <div class="jumbotron bg-dark" style="width: 300px; border-radius: 0%;">
+                <form #form="ngForm" ngForm="form" (ngSubmit)="registrarAdmin(form)" method="POST">
+                    <h2 class="text-center text-white mb-4">Choferes.</h2>                
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text"  name="Correo" #Correo="ngModel" [(ngModel)]="informA.Correo"> 
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Ingrese su correo</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="password" name="Password" #Password="ngModel" [(ngModel)]="informA.Password">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Ingrese su contraseña</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="password">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Confirme su contraseña</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Nombre</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="number">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Celular</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 text-white">      
+                        <label class="mr-1">Imagen</label>                  
+                        <input class="ml-4" required type="file">                        
+                    </div>                                        
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text" name="Tipo" #Tipo="ngModel"  [(ngModel)]="informA.Tipo">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Curp</span>
+                        </label>
+                    </div>  
+                    <button type="submit" onclick="document.location.reload()" class="btn btn-dark col-12 mt-4">Guardar</button>                                            
+                </form>                
+                <div class="d-flex btn-group" style="margin-bottom: -6%;">                    
+                    <button class="btn btn-danger col-6" data-toggle="modal" data-target="#admin">Eliminar</button>                                
+                    <button type="button" class="btn btn-warning col-6" data-toggle="modal" data-target="#cambios">Modificar</button>          
+                </div>                                                                                                       
+            </div>
+            <div class="jumbotron" style="width: 300px; border-bottom-left-radius: 0%; border-top-left-radius: 0%; background: midnightblue;">
+                <form #form="ngForm" ngForm="form" (ngSubmit)="registrarAdmin(form)" method="POST">
+                    <h2 class="text-center text-white mb-4">Administradores.</h2>                
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text"  name="Correo" #Correo="ngModel" [(ngModel)]="informA.Correo"> 
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Ingrese su correo</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="password" name="Password" #Password="ngModel" [(ngModel)]="informA.Password">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Ingrese su contraseña</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="password">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Confirme su contraseña</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Nombre</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="number">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Celular</span>
+                        </label>
+                    </div>
+                    <div class="d-flex mb-2 text-white">      
+                        <label class="mr-1">Imagen</label>                  
+                        <input class="ml-4" required type="file">                        
+                    </div>                                        
+                    <div class="d-flex mb-2 formw">                        
+                        <input required type="text" name="Tipo" #Tipo="ngModel"  [(ngModel)]="informA.Tipo">
+                        <label class="lbl-nom">
+                            <span class="text-nomb">Curp</span>
+                        </label>
+                    </div>  
+                    <button type="submit" onclick="document.location.reload()" class="btn btn-dark col-12 mt-4">Guardar</button>                                            
+                </form>
+                <div class="d-flex btn-group" style="margin-bottom: -6%;">                    
+                    <button class="btn btn-danger col-6" data-toggle="modal" data-target="#admin">Eliminar</button>                                
+                    <button type="button" class="btn btn-warning col-6" data-toggle="modal" data-target="#cambios">Modificar</button>          
+                </div>                                                                                                       
+            </div>
+        </div>
+        
+        
+    </div>
+
+</div>    
+
+
+<div class="modal" tabindex="-1" id="choferes">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Choferes</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Correo</th>                      
+                        <th>Tipo</th>                                              
+                        <th>Seleccionar</th>                                              
+                    </tr>
+                </thead>
+                <tbody *ngFor="let c of choferes">
+                      <tr>
+                          <td>{{ c.ID }}</td>
+                          <td>{{ c.Correo }}</td>                                                
+                          <td>{{ c.Tipo }}</td>                        
+                          <td><button class="btn btn-primary" (onclick)="guardarID(c.id)">ID</button></td>                        
+                      </tr>
+                </tbody>              
+            </table>
+        </div>
+        <div class="modal-footer btn-group">                  
+          <button type="button" class="btn btn-danger" (click)="deleteChofer()">Eliminar</button>          
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="admin">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Administradores</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-dark">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Correo</th>                      
+                      <th>Tipo</th>                      
+                      <th>Seleccionar</th>  
+                  </tr>
+              </thead>
+              <tbody *ngFor="let a of administrador">
+                    <tr>
+                        <td>{{ a.ID }}</td>
+                        <td>{{ a.Correo }}</td>                                                
+                        <td>{{ a.Tipo }}</td>                        
+                        <td><button class="btn btn-primary" (click)="guardarID(a.ID)">ID</button></td>
+                    </tr>
+              </tbody>              
+          </table>
+        </div>
+        <div class="modal-footer btn-group">            
+            <button type="button" class="btn btn-danger" (click)="deleteAdmin()">Eliminar</button>          
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal" tabindex="-1" id="cambios">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cambios para administrador.</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="" #form="ngForm" ngForm="form" (ngSubmit)="modAdmin(form)" method="POST">
+                    <div class="d-flex mb-2">
+                        <label class="col-4">Correo:</label>
+                        <input class="input-group-text col-8 bg-white" type="email" placeholder="Ingresa un nuevo correo" name="Correo" #Correo="ngModel"  [(ngModel)]="informA.Correo">
+                    </div>                                                  
+                    <div class="d-flex mb-2">
+                        <label class="col-4">Usuarios disponibles:</label>
+                        <select class="input-group-text col-8 bg-white" name="ID" #Correo="ngModel"  [(ngModel)]="informA.ID">
+                            <option *ngFor="let r of administrador">{{ r.ID }}</option>                            
+                        </select>
+                    </div>                                                  
+                                            
+                    <button type="submit" class="btn btn-dark">Guardar</button>                                                            
+            </form>          
+        </div>
+        <div class="modal-footer btn-group">            
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="cambiosC">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cambios para chofer.</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="" #form="ngForm" ngForm="form" (ngSubmit)="modAdmin(form)" method="POST">
+                    <div class="d-flex mb-2">
+                        <label class="col-4">Correo:</label>
+                        <input class="input-group-text col-8 bg-white" type="email" placeholder="Ingresa un nuevo correo" name="Correo" #Correo="ngModel"  [(ngModel)]="informA.Correo">
+                    </div>                                                  
+                    <div class="d-flex mb-2">
+                        <label class="col-4">Usuarios disponibles:</label>
+                        <select class="input-group-text col-8 bg-white" name="ID" #Correo="ngModel"  [(ngModel)]="informA.ID">
+                            <option *ngFor="let r of administrador">{{ r.ID }}</option>                            
+                        </select>
+                    </div>                                                  
+                                            
+                    <button type="submit" class="btn btn-dark">Guardar</button>                                                            
+            </form>          
+        </div>
+        <div class="modal-footer btn-group">            
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+.formw {  
+  width: 100%;
+  height: 63px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;  
+}
+
+.formw input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: white;
+  padding-top: 20px;
+  border: none;
+  outline: 0px;  
+}
+
+.formw .lbl-nom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+
+.formw .lbl-tel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.formw .lbl-nom:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #2ecece;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.formw .lbl-tel:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #2ecece;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.text-nomb {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+
+
+.formw input:focus + .lbl-nom .text-nomb,
+.formw input:valid + .lbl-nom .text-nomb {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #2ecece;
+}
+
+.formw input:focus + .lbl-tel .text-telf,
+.formw input:valid + .lbl-tel .text-telf {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #2ecece;
+}
+
+.formw input:focus + .lbl-nom:after,
+.formw input:valid + .lbl-nom:after {
+  transform: translateX(0%);
+}
+
+.formw input:focus + .lbl-tel:after,
+.formw input:valid + .lbl-tel:after {
+  transform: translateX(0%);
+}
+
+.an{
+  transition-delay: 10s;
+}

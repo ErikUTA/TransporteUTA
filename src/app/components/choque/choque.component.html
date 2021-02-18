@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"><i class="fas fa-car"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">                
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['/menuAdmin']">Regresar</a>
+        </li>   
+      </ul>     
+    </div>
+</nav>
+<div class="jumbotron m-5 bg-dark">
+    <div class="conteiner d-flex">
+        <div class="col-6">
+          <h3 class="text-white">Reporte de choque</h3>
+          <div class="formw">
+            <input type="text" required>
+            <label class="lbl-nom">
+              <span class="text-nomb">Ingrese matrícula del vehículo</span>
+            </label>          
+          </div>
+          <div class="formw">            
+            <input type="text" required>
+            <label class="lbl-nom">
+              <span class="text-nomb">Ingrese motivo de choque</span>
+            </label>
+          </div>
+          <div class="formw">
+            <input type="text" required>
+            <label class="lbl-nom">
+              <span class="text-nomb">Dirección donde sucedió el choque</span>
+            </label>
+          </div>
+          <div class="formw">
+            <input type="text" required>
+            <label class="lbl-nom">
+              <span class="text-nomb">Aseguranza.</span>
+            </label>
+          </div>
+          <button class="col-12 btn btn-primary mt-2">Enviar</button>
+        </div>
+        <div class="col-6">
+          <img src="../../../assets/choque.png" width="450px" height="300px">        
+        </div>
+    </div>
+</div>
+
